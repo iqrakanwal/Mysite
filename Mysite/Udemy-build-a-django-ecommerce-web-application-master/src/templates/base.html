@@ -1,0 +1,25 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head><w></w>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <title>Base Template</title>
+       {% include 'base/css.html' %}
+
+        {% block base_head %}{% endblock %}
+
+    </head>
+    <body>
+      {% include 'base/navbar.html' with brand_name='CodeSnippets' %}
+      <div class='container'>
+      {% block content %}{% endblock %}
+    </div>
+ {% include 'base/js.html' %}
+    </body>
+  </html>
